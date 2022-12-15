@@ -1,7 +1,7 @@
 <script
     lang="ts"
     setup>
-import LessonCompleteButton from "~/components/LessonCompleteButton.vue";
+import LessonCompleteButton from "~/components/LessonCompleteButton.client.vue";
 import { Chapter, Lesson } from "~/interfaces/base.interface";
 
 const course = useCourse();

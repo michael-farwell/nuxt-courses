@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@nuxtjs/web-vitals': ^0.2.2
   '@tailwindcss/typography': ^0.5.8
   '@vueuse/core': ^9.6.0
   '@vueuse/nuxt': ^9.6.0
@@ -10,6 +11,7 @@ specifiers:
   tailwindcss: ^3.2.4
 
 devDependencies:
+  '@nuxtjs/web-vitals': 0.2.2
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   '@vueuse/core': 9.6.0
   '@vueuse/nuxt': 9.6.0_nuxt@3.0.0
@@ -624,6 +626,19 @@ packages:
       - typescript
       - vls
       - vti
+    dev: true
+
+  /@nuxtjs/web-vitals/0.2.2:
+    resolution: {integrity: sha512-UfIxBJGDXYnCgchPKt3rN1Tf66gUpRtOyo8gk9V9S2VWp8Q9ylHrwTB+y6ZPW+HRIC4B+KRh+LBIHv9ELycAJQ==}
+    dependencies:
+      '@nuxt/kit': 3.0.0
+      defu: 6.1.1
+      pathe: 1.0.0
+      ufo: 1.0.1
+      web-vitals: 3.1.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /@rollup/plugin-alias/4.0.2_rollup@2.79.1:
@@ -4722,6 +4737,10 @@ packages:
   /web-streams-polyfill/3.2.1:
     resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
     engines: {node: '>= 8'}
+    dev: true
+
+  /web-vitals/3.1.0:
+    resolution: {integrity: sha512-zCeQ+bOjWjJbXv5ZL0r8Py3XP2doCQMZXNKlBGfUjPAVZWokApdeF/kFlK1peuKlCt8sL9TFkKzyXE9/cmNJQA==}
     dev: true
 
   /webidl-conversions/3.0.1:

@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/web-vitals": "^0.2.2",
     "@tailwindcss/typography": "^0.5.8",
     "@vueuse/core": "^9.6.0",
     "@vueuse/nuxt": "^9.6.0",
