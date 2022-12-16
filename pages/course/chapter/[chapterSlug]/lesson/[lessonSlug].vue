@@ -1,15 +1,12 @@
 <script
     lang="ts"
     setup>
-import LessonCompleteButton from "~/components/LessonCompleteButton.client.vue";
-import { Chapter, Lesson } from "~/interfaces/base.interface";
-
 const course = useCourse();
 const route = useRoute();
 
 const progress = useLocalStorage<boolean[][]>("progress", []);
 
-const chapter = computed((): Chapter | undefined => {
+const chapter = computed(() => {
   return course.chapters.find((chapter) => chapter.slug === route.params.chapterSlug);
 });
 const isLessonComplete = computed((): boolean => {
@@ -23,7 +20,7 @@ const isLessonComplete = computed((): boolean => {
 
   return progress.value[chapter.value!.number - 1][lesson.value!.number - 1];
 });
-const lesson = computed((): Lesson | undefined => {
+const lesson = computed(() => {
   return chapter.value!.lessons.find((lesson) => lesson.slug === route.params.lessonSlug);
 });
 const title = computed((): string => {
