@@ -8,7 +8,7 @@ export type Lesson = {
   videoId: number;
   text: string;
   sourceUrl?: string;
-  path?: string
+  path: string
 }
 
 export type Chapter = {
