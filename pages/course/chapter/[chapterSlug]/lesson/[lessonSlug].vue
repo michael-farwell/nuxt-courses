@@ -9,6 +9,13 @@ const progress = useLocalStorage<boolean[][]>("progress", []);
 const chapter = computed(() => {
   return course.chapters.find((chapter) => chapter.slug === route.params.chapterSlug);
 });
+if (!chapter.value) {
+  throw createError({
+    statusCode: 404,
+    message: "Chapter not found",
+  });
+}
+
 const isLessonComplete = computed((): boolean => {
   if (!progress.value[chapter.value!.number - 1]) {
     return false;
@@ -23,6 +30,13 @@ const isLessonComplete = computed((): boolean => {
 const lesson = computed(() => {
   return chapter.value!.lessons.find((lesson) => lesson.slug === route.params.lessonSlug);
 });
+if (!lesson.value) {
+  throw createError({
+    statusCode: 404,
+    message: "Lesson not found",
+  });
+}
+
 const title = computed((): string => {
   return `${ lesson.value?.title } - ${ course.title }`;
 });
